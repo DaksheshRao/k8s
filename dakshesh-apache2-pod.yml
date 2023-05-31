@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: dakshesh-apache2-pod
+ namespace: dakshesh
+ labels:
+   file: apache2
+spec:
+ containers:
+   - name: dakshesh-fibonacci-pod
+     image: daksheshrao/httpd-apache:1.0

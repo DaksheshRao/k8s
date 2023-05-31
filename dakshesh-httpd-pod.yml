@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: dakshesh-httpd-pod
+ namespace: dakshesh
+ labels:
+   file: httpd
+spec:
+ containers:
+   - name: dakshesh-apache-pod
+     image: daksheshrao/demo-repository:latest

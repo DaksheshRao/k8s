@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: dakshesh-fibonacci-pod
+ namespace: dakshesh
+ labels:
+   file: fibonacci
+spec:
+ containers:
+   - name: dakshesh-fibonacci-pod
+     image: daksheshrao/fibonacci:4.0
