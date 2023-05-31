@@ -8,4 +8,4 @@ metadata:
 spec:
  containers:
    - name: dakshesh-fibonacci-pod
-     image: daksheshrao/fibonacci:4.0
+     image: daksheshrao/febonacci:1.1
