@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dakshesh-ingress
+spec:
+  rules:
+    - host: k8s-trn-node1.cubastion.net
+      http:
+        paths:
+          - path: /dak-httpd
+            pathType: Prefix
+            backend:
+              service:
+                name: dakshesh-httpd-service
+                port:
+                  number: 80
+          - path: /dak-apache2
+            pathType: Prefix
+            backend:
+              service:
+                name: dakshesh-apache2-service
+                port:
+                  number: 90
+

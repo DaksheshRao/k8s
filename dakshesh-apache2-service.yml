@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
- name: dakshesh-apache2-service
- namespace: dakshesh
+  name: dakshesh-apache2-service
+  namespace: dakshesh
 spec:
- type: NodePort
- ports:
-   - port: 81
-     targetPort: 81
-     nodePort: 30015
- selector:
-   file: apache2
+  type: LoadBalancer
+  ports:
+    - port: 90
+      targetPort: 81
+  selector:
+    file: apache2
+

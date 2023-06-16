@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: https-deployment
+  namespace: dakshesh
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+     file: httpd
+  template:
+    metadata:
+      name: dakshesh-httpd-pod
+      namespace: dakshesh
+      labels:
+        file: httpd
+    spec:
+      containers:
+        - name: dakshesh-apache-pod
+          image: daksheshrao/httpd:1.0
